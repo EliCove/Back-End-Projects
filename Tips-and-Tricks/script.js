@@ -311,7 +311,7 @@ function declaration:
 //to use javascript code embedded inside an HTML file for the browser to run use <script> </script> tags
 
 //window.alert() is a method built into the browser's runtime environment and any program executed into the browser has access to method.
-//<script> window.alert('Hello World'); </script> will create a pop-up box with the text "Hello World" in the browser:
+//!<script> window.alert('Hello World'); </script> //will create a pop-up box with the text "Hello World" in the browser:
 //  inside Test-Code/Browser-Runtime.
 
 //the "window" object prvides access a huge amount of data and functionality relating to the open browser window beyond .alert(), 
