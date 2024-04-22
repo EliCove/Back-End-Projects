@@ -177,8 +177,6 @@ multi-line block:
 ! }
 */
 
-//* defining functions end
-
 //function parameters are placeholders for information that will be passed through a function when it is called, 
 //(they are treated like variables within the function), example;
 /*
@@ -367,6 +365,106 @@ You can check to see the directory a file is located in using the Node runtime e
 //Front-End JavaScript applications are executed in a browser's runtime environment and have access to the "window" object.
 //Back-End JavaScript applications are executed in the Node runtime environment and have access to the file system, databases, and networks
 //  attached to the server.
+
+// * * Arrays:
+
+//One way to create arrays is an array literal:
+//  An array literal creates an array wrapping an item in square brackets [], example:
+/*
+the array literal is set to the variable myInfo:
+! const myInfo = ['my name is Marion', 21, true];
+*/
+
+//each element in an array has an index value starting with 0, to access individual elements use the array name an the index value inside
+//  square brackets, bracket notation:
+/*
+! console.log(myInfo[0]); //prints "my name is Marion"
+*/
+//strings also have index values that you can access using bracket notation and an index value:
+/*
+! const name = 'Marion';
+! console.log(name[0]); //prints 'M'
+*/
+
+//to change individual elements inside an array you can set the array name with bracket notation and the index value you want to change
+//  equal to the value you want to change it to, example (using my first array above):
+/*
+! myInfo[1] = 22;
+! console.log(myInfo); //prints [ 'my name is Marion', 22, true ]
+*/
+
+//differences between arrays declared with let and const:
+//elements in an array declared with const are mutable, meaning you CAN change the contents of a const array, but you can NOT reassign a
+//  new array or a different value (new total value, like array or other data type, like function or string), example (using my first 
+//  array above):
+/*
+! myInfo[2] = false;
+! console.log(myInfo); //prints [ 'my name is Marion', 21, false ]
+*/
+//elements in an array declared with let CAN change it's contents and CAN reassign a new array or a different value
+
+//array's have the built in property "length" that you can use with dot notation to return the number of items inside an array, 
+//  just like you can use it to figure out how many characters are in a string. 
+
+//.push() method allows you to add items to the end of an array and returns the new array length, it is called like a function,
+//  with items added as arguments ( arrayName.push(r) ), examples (using my first array above):
+/*
+! myInfo.push('loves learning', 'knows C#');
+! console.log(myInfo); //prints [ 'my name is Marion', 21, true, 'loves learning', 'knows C#' ]
+*/
+//.push() changes or mutates the myInfo array. 
+//  .push() is referred to as a destructive array method since it mutates the origional array
+
+//.pop() method allows you to remove last item of an array, it doesn't take any arguments, and it returns the value of the last item.
+//  The item returned can be set to a variable and used later. 
+//  .pop() mutates the origin array, example (using my first array above):
+/*
+! const lastItem = myInfo.pop();
+! console.log(myInfo); //prints [ 'my name is Marion', 21, true ]
+! console.log(lastItem); //print "true"
+*/
+
+//there are non-mutating array methods for when you don't want to mutate the origional array
+
+//.join() : combines array items and converts into a string, can take one argument of a string to separate items, can be used without 
+//  an argument but won't have any seperator between combined array items in the string. Non-mutating!
+
+//.slice() : return a partial copy of an array and can take two arguments, first argument the beginning index value and second argument
+//  the index value following the the last wanted index value item; if one argument is used, if positive it selects the beginning index 
+//  value and returns the following array items, if negative it selects starting from -1 index for the last list item index; if no 
+//  arguments it makes a copy of the whole array. Non-mutating!
+
+//.splice() : modifies an array by inserting, removing, and/ or replacing array elements, then returning an array of removed elements.
+//  To remove array items use two arguments, first to select array index removal start and the total number of index items in sequence.
+//  To insert items there are three or more arguments, first select the array starting index, second set 0 to keep item or use 1 or greater
+//  numbers to replace, third or more are the list items to add. Mutating!
+
+//.shift() : removes and returns the first element of an array, it also shifts down all subsequent elements down one place. Mutating!
+
+//.unshift() : adds one or more elements to the begining of an array, returns the new array length, add elements as arguments. Mutating!
+//  array
+
+//.concat() : merges or concatenates two or more array and it doesn't change the existing array, but returns a new array. You put the 
+//  first array name before .concat and then pass the second or more arrays as arguments. Non-mutating.
+
+//.indexOf() : returns the first index value at which an element passed as an argument can be found, returns -1 if the value can't be found.
+//  Non-mutating!
+
+//there are many more array methods in JavaSript arrays documentation
+
+//if you try to change an array in function, and the array is mutated in the function, when the function is called with the array
+//  the array will be changed outside the function as well. This concept is called pass-by-reference, since what we are actually passing 
+//  to the function is a reference to where the variable memory is stored and changing the memory.
+
+//Nested array: when an array contains another array. To access nested array you can use bracket notation with the index value and to 
+//  access elements within the nested array chaining or adding on more bracket notation with index values can be done, example:
+/*
+    const arrayNested = [[12, 4, 17], [13, 77]];
+    console.log(arrayNested[0]); prints [ 12, 4, 17 ]
+    console.log(arrayNested[1][0]); prints "13" //used a chain to add [0] to arrayNested[1]
+*/
+
+// * * Arrays end
 
 //use shift + tab to shift code to the left
 
