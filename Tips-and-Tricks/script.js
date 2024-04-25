@@ -463,8 +463,136 @@ the array literal is set to the variable myInfo:
     console.log(arrayNested[0]); prints [ 12, 4, 17 ]
     console.log(arrayNested[1][0]); prints "13" //used a chain to add [0] to arrayNested[1]
 */
+// ? to select a random element from an array use the Math.floor(Math.random() * array.length) inside bracket notation, 
+// ?    example from Codecademy:
+/*
+? const cards = ['diamond', 'spade', 'heart', 'club'];
+? const currentCard = cards[Math.floor(Math.random * cards.length)]; //returns one of the four values
+*/
 
 // * * Arrays end
+
+// * * Loops:
+
+//for loop:
+//the typical "for" loop includes an iterator (repeater) variable that appears in all three expressions of the for loop. The iterator 
+//  variable is initialized, checked against the stopping condition, and assigned an new value on each loop iteration.
+//  It is best practice to use a descriptive iterator variable name.
+//The "for" loop contains three expressions separated by ";" inside parenthesis:
+//  1. an initialization stars the loop and can be used to declare the iterator variable
+//  2. a stopping condition is the condition that the iterator variable is evaluted against; "true" run, "false" stop
+//  3. an iteration statement is used to update the iterator on each loop
+//Example:
+/*
+! for (let counter = 0; counter < 4; counter++) {
+!   console.log(counter); //prints 0 (new line) 1 (new line) 2 (new line) 3
+! }
+*/
+
+//looping in reverse:
+//To run a backward for loop: set the iterator to the highest desired value in the iterated expression, set the stopping condition for when
+//  the iterator value is less than the desired amount, and the iterator should decrease in intervals after each interation; Example:
+/*
+! for (let counter = 3; counter >= 0; counter--) {
+!   console.log(counter); //prints 3 (new line) 2 (new line) 1 (new line) 0
+! }
+*/
+
+//looping through arrays:
+//To loop through each element in an array a for loop should use the array's ".length" property in it's condition (second expression), and
+//  the iterator variable set into the bracket notation of the array "array[i]". For arrays you can use "i" for the iterator variable name,
+//  because i is though of as the short-hand for the word "index". 
+//Remember that array's are zero index, so the index of the last element in an array is equivalent to array.length - 1.
+//Example:
+/*
+! const colors = ['blue', 'orange', 'purple', 'green']
+! for (let i = 0; i < colors.length; i++) {
+!   console.log('Today\'s favorite color is: ' + colors[i]); //prints "Today's favorite color is: blue" (new line) "Today's favorite ..."
+! }
+*/
+
+//nested loops: when there is a loop running inside of another loop. For each round of the outer loop, the inner loop will run completely.
+
+//while loop:
+//continues looping until a the condition is false, it is used when the number of times the loop needs to iterate is unknown.
+//to turn a while loop into a for loop use create the iteration variable outside of the while loop, the stopping condition is in 
+//  parenthesis after the "while" keyword, the incrementation will happen inside the while loop ususally at the end of loop block.
+//  Example:
+/*
+! let iteratorNum = 0;
+! while (iteratorNum < 6) {     //prints 0 (new line) 1 (new line) 2 (new line) 3 (new line) 4 (new line) 5
+!   console.log(iteratorNum);   
+!   iteratorNum++;
+! }
+*/
+// Example 2 not written like a for loop (source Codecademy):
+/*
+! const card = ['diamond', 'spade', 'heart', 'club'];
+! let currentCard;
+! while (currentCard !== 'spade') {
+!   currentCard = card[Math.floor(Math.random() * 4)];
+!   console.log(currentCard); //prints a card value each one on a new line in the console until it ends in the value "spade"
+! }
+*/
+
+//do...while loop: 
+// works the same as while, except it will always run at least once and will run again if the condition is true, and if it equivalates
+//   to false the loop will stop. The condition is at the end of loop instead of beginning. Example:
+/*
+! do {
+!    //code to run
+! } while (condition);
+*/
+
+//break keyword:
+//  you can use the break keyword to stop a loop from continuing to execute even thought the orginonal stopping condition hasn't been met.
+//  "break" allows you to break out of the loop from within the loop block. Example (using Example 2 array above):
+/*
+! for (let i = 0, i < card.length, i++) {  //iterates through array (to print elements) to end, unless there is a value of 'spade', then
+!   console.log(card[i]);                  //    it breaks free from the loop.          
+!   if (card[i] === 'spade') {
+!      break;
+!   };
+! }
+*/
+
+//"for...of" loop, "for" loop replacement for iterating through arrays, strings, and array-like objects, example:
+/*
+! const items = 'pen', 'marker', 'pencil', 'highlighter';
+! for (const item of items) {   //item is a temperary iterator variable, can be named anything; usually relating to array name
+!    console.log(`I use ${item}.`);   //print each item in items on their own line in console
+! }
+*/
+//can declare with let, const, or var.
+//  Sometimes it is necissary to use the "break" keyword to end the loop when a specific condition is met.
+//You can also use the "continue" keyword to skip one iteration of the loop, example from items array above:
+/*
+! for(const item of items) {
+!   if (item === 'marker') {
+!       continue;               // skips the iteration where item equals 'marker', so that array item won't be printed to the console
+!   }
+!   console.log('I use ${item}.`);
+! }
+*/
+// ? you can NOT use a "for...of" loop to iterated backwards through an array, so use a regular for loop for that
+
+// ? there are other "for..." type loops in JavaScript that are used for different purposes, like "for...in", so use them depending on 
+// ?    the situation.
+
+// * * Loops end
+
+// * * Objects:
+//TODO: fill in later    
+// * * Objects end
+
+// * * Higher-order functions
+//TODO: fill in later
+// * * Higher-order functions end
+
+// * * Built in iterator methods (iterators):
+//TODO: fill in later
+// * * Built in iterator methods end
+
 
 //use shift + tab to shift code to the left
 
