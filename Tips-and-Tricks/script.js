@@ -312,7 +312,7 @@ function declaration:
 //!<script> window.alert('Hello World'); </script> //will create a pop-up box with the text "Hello World" in the browser:
 //  inside Test-Code/Browser-Runtime.
 
-//the "window" object prvides access a huge amount of data and functionality relating to the open browser window beyond .alert(), 
+//the "window" object provides access a huge amount of data and functionality relating to the open browser window beyond .alert(), 
 //  other examples:
 //  window.prompt() and window.confirm(): inside Test-Code/Browser-Runtime
 

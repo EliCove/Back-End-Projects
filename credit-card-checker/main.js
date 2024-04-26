@@ -24,11 +24,37 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+const validateCred = numArr => {
+  let even = 0;
+  let sumArr = numArr.toReversed();
 
+  sumArr = sumArr.map(num => {
+    if (even % 2 !== 0) {
+      even++;
+      if (num * 2 > 9) {
+          return (num * 2) - 9;
+      } else {
+          return num * 2;
+      }   
+    } else {
+      even++;
+      return num;
+    }
+  });
 
+  const sum = sumArr.reduce((accum, currentVal) => accum + currentVal);
 
+  if (sum % 10 === 0) {
+    return true;
+  }
+  return false;
+};
 
+//console.log(validateCred(mystery2));
 
-
-
-
+const findInvalidCards = numNestArr => {
+  console.log(numNestArr);
+};
+const idInvalidCardCompanies = numNestArr => {
+  console.log(numNestArr);
+};
