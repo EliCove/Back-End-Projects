@@ -593,6 +593,228 @@ the array literal is set to the variable myInfo:
 //TODO: fill in later
 // * * Built in iterator methods end
 
+// * * JavaScript and the DOM:
+
+//<script> element: allows you to add JS code inside an HTML file,  or if you use the:
+//src attribute set to a JS file, you can link that JS code to the HTML file.
+
+//defer attribute: loads the script, but ensures that that the whole HTML file has been parsed before before the script is executed.
+//async attribute: loads the script in the background and when it will execute immediately after it has been downloaded.
+
+//DOM (Document Object Model): it is a model of objects in a document, it is a powerful tree-like structure that allows programmers to
+//  conceptualize hierarchy and access the elements on a web page. It can also be explained as a logical tree-like Moedl that that 
+//  organizes a web page's HTML Document as an Object. This meaning because in JS the document is accessed an object.
+//  It's implemented to browsers to allow JS to access, modify, and update the structure of an HTML webpage in an organized way.
+
+//node: a family member in computer science, it is defined as an interscting point in a tree that contains data. 
+//  In the DOM tree the top-most node is called the Root Node, which represents the HTML document, the decendents start eith the <html>
+//  tags followed by the <head> tage, <body> tag, etc.
+//parent node: any node that is a direct ancestor to another node
+//child node: is a direct descendent of another node, called the parent node
+//  there are multiple types of node objects in the DOM tree: element nodes, text nodes, etc.
+
+//The DOM allows you to access a node's attributes.
+
+//! document
+//document object: ia the door the the DOM structure, it allows access to the root node of the DOM tree; it allows scripts to access 
+//  children of the DOM as properties. Use dot notation and element name or preperty like you would acess any other object in JS.
+
+//When accessing an HTML element using the DOM in your script, you also have access to all of that elements properties. Including:
+//  the ability to modify the contents, attributes, and properties of an element.
+//! .innerHTML
+// the .innerHTML property allows ability to access and set the contents of an element. Examples:
+/*
+! document.body.innerHTML = 'My pets get along most of the time.'; //completely replaces body with this text
+
+! document.body.innerHTML = '<h2>This will be the last time, subheading</h2>'; //completely replaces body with h2 element with this text
+*/
+
+//! .querySelector()
+//the .querySelector() method takes in the argument of a selector as a string and and returns the first element that matches that selector.
+
+//JS has more targeted methods than the select elements based on their class, id, or tag name.
+
+//! .getElementByID()
+//is used to select ID by entering the ID name value inside quotes as the method's argument
+
+//! .getElementsByClassName()
+//is used to select specific class elements in the document by setting the array value index for selected element in the document, example:
+/*
+! document.getElementsByClassName('i')[n].innerHTML = 'value to insert into element';
+! document.getElementsByClassName('i')[n].style.fontFamily = 'Roboto';
+*/
+
+//! .getElementsByTagName()
+//is used to select element by their tag name by ???
+//can be used to set the innerHTML by setting the array value index of the specific tag in the document, example:
+/*
+! document.getElementsByTagName('i')[n].innerHTML = 'value to insert into element';
+*/
+
+//! .style
+//is a property that is used to style using JS, to style an element you have to use element.style.property format, where property is a
+//  css property name that can be set to a styling value, example:
+/*
+! document.querySelector('body').style.backgroundColor = 'blue'; //makes the whole background blue
+*/
+//uses style properties using camelCase instead of hyphens, example:
+//! backgroundColor instead of background-color
+
+//! .parentNode 
+//the .parentNode property returns the parent of a specific element in the DOM hierarchy. The document element is the root node so it's
+//  .parentNode property will return "null"
+
+//! .children
+//the .children property returns an array of the specified element's children. If it does not have any children, it will return "null"
+//if you select an individual child element, you can change it's innerHTML and it's styling: since it is set to the value of a specific
+//  element.
+
+//! .createElement()
+//the .createElement() method creates a new element base of the tag name passed into it as an argument, but it doesn't append it to the 
+//  document, it creates an empty element with no inner HTML.
+//values can be assigned to properties of newly created element, examples:
+/*
+! let myInfo = document.createElement('p');
+! myInfo.id = 'my-name';
+! myInfo.innerHTML = 'Marion Covington | marioncovington@hotmail.com | EliCove Projects';
+*/
+
+//! .appendChild()
+//the .appendChild() method is used add a child element as the parent element's last child node, example:
+/*
+! document.querySelector('footer').appendChild(myInfo); //adds myInfo as the last child of the footer element
+*/
+
+//! .removeChild()
+//the .removeChild() method removes a specified child of a parent, example:
+/*
+! let headerTwo = document.querySelector('h2');
+! document.body.removeChild(headerTwo);
+*/
+
+//! .hidden
+//the .hidden property allows you to hide a tag by setting it to "true" of "false", it doesn't remove the element from the DOM but hides it
+//  example:
+/*
+! document.getElementsByClassName('disappear')[0].hidden = true; //hides the first element with the class of disappear.
+*/
+
+//! .onclick
+//the .onclick property allows you to assign a function to run on when a click a click event happens on an element.
+//  you can also assign the .onclick property to a function by name, example:
+/*
+! let listItemSix = document.getElementByTagName('li')[5];
+! listItemSix.onclick = function() {
+!   listItemSix.hidden = true;
+! };                                            //makes list item 6 disappear when clicked on
+
+
+
+! let dropDownThree = document.getElementsByClassName('dropDown')[2];
+
+! const moreInformation = () => {
+!   let newListItem = document.createElement('li');
+!   newListItem.innerHTML = 'Dogs are really smart, once they come to know how something works to their benefit, they change their 
+! behavior.';
+!   dropDownThree.parentNode.appendChild(newListItem);
+! }
+
+! dropDownThree.onclick = moreInformation; // creates an new element after dropDownThree, with added information, that appears on a click
+*/
+//? how often and when do you use the document declaration?
+//? whenever you need to set or access something, starting from the document itself, probably
+
+// * * JavaScript and the DOM end
+
+// * * DOM events with JavaScript:
+
+//! .addEventListener()
+//the .addEventListener() method can have a DOM element listen for a specific event and execute a block of code when the event is detected
+//  The DOM element that listens for an event is called the "event target" and the block of code that runs when the event happens is called
+//  the "event handler". Example:
+/*
+! let eventTarget = document.querySelector('aside');
+
+! eventTarget.addEventListener('click', () => {
+!   //this is event handler code:
+!   eventTarget.style.backgroundColor = violet; // does the same thing as the onclick property except the function and the event are  
+!   eventTarget.style.color = beige;            //   arguments, instead of having the event inself set equal to the function.
+*/
+// it is best practice to create a named event handler function, to keep your code organized and reusable, even if your code gets complex.
+// so best practice for the code above the code for the .addEventListener() method, would be and change like this:
+/*
+! function eventHandlerFunction() {
+! eventTarget.style.backgroundcolor = violet;
+! eventTarget.style.color = beige;
+! }
+
+! eventTarget.addEventListener('click', eventHandlerFunction);
+*/
+//the .addEventListener() method can add multiple function handler functions, unlike the .onevent syntax that is set to only one function
+
+//* .onevent property syntax
+//event handlers can also be set using an .onevent property on a DOM element (event target). 
+//The pattern for registering a specific event is to append an element with ".on" followed by the lowercased event type name, like 
+//  document.getElementById('myElement').onclick = function() {/*event handler code*/}; which used the click event by using .on plus click.
+
+//! .removeEventListener()
+//the .removeEventListener() method is used to reverse the .addEventListener() method by stopping the event target from 'listening' for an
+//  event to fire when it no longer needs to. It takes two arguments, the event type as a string and the event handler function. Example:
+/*
+! eventTarget.removeEventListener('click', eventHandlerFunction);
+*/
+//the the event type name and the name of event handler to remove must both be there because there might be many event handler functions 
+//  associated with a particular event.
+//If .addEventListener() was provided an anonymous function, then the event listener can't be removed.
+//?You can set an .removeEventListener() inside of the eventHandlerFunction that is being called with the .addEventListener,
+//? to make it run the function only once, in other words close the listener once it runs through it.
+//Example:
+/*
+! function eventHandlerFunction(){
+!   //code to change the DOM
+!   eventTarget.removeEventListener('event', eventHandlerFunction);
+! }
+
+! eventTarget.addEventListener('click', eventHandlerFunction);
+*/
+
+//event objects properties:
+//you can access object properites using the .addEventListener() method and setting an argument for the function that will take in the 
+//  event object, which you can then use the event object properties on. Example:
+/*
+! function eventHandlerFunction(event) {
+!   console.log(event.timeStamp);
+! }
+
+! eventTarget.addEventListener('click', eventHandlerFunction); //the click event is taken in as the event argument in the eventHandlerFunction()
+*/
+
+//*call these propeties to see information about the event:
+//! .target
+//the .target property is used to reference the element that the event is registered to, example:
+/*
+! function eventHandlerFunction(event) {
+!   event.target.innerHTML = 'I am the element that event was set on!'; //sets the innerHTML of the element the event is set to 
+! }
+
+! idElementInfo.addEventListener('click', eventHandlerFunction); //sets the innerHTML of idElementInfo to the string in the eventHandlerFunction
+*/
+
+//! .type
+//the .type property is used to access the name of the event, example (using and changing the function from .target propety example):
+/* inside eventHandlerFunction():
+! console.log(event.type); //would print 'click' to the console once click event is triggered
+*/
+
+//! .timeStamp
+//the .timeStamp property is used to access the number of milliseconds that passed since the document loaded and the event was triggered
+//  Example (using and changing the function from .target propety example):
+/* inside eventHandlerFunction():
+! console.log(event.timeStamp); //prints how log it takes for event to be triggered once the document is loaded
+*/
+
+// * * DOM events with JavaScript end
+
 
 //use shift + tab to shift code to the left
 
