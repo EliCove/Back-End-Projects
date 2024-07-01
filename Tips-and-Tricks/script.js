@@ -1363,6 +1363,18 @@ the array literal is set to the variable myInfo:
 //?Find out better how setters work in objects and classes: to set specific conditions for an input and warning messages that an input
 //?   doesn't work.
 
+//setter example:
+/*
+!set messages(messageInput){
+  replace this later with a try...catch statement:
+!  if (typeof messageInput !== 'array') {
+!    alert('The message is not set as an array!!!');
+!  } else {
+!    this._messages = messageInput;
+!  }
+!}
+*/
+
 // * * Classes end
 
 // * * Modules:
@@ -1694,7 +1706,7 @@ the array literal is set to the variable myInfo:
 //? if cursor is stuck in git log mode use the "q" key to escape
 
 //! git branch 
-//creates a new branch in the working directory
+//and a name creates a new branch in the working directory
 
 //* Aliases:
 //instead of typing out long git commands every time I want to use them, I can set an use an alias for commands I commonly use by using
@@ -1775,12 +1787,27 @@ the array literal is set to the variable myInfo:
 
 //! git commit --amend
 //allows commits to be corrected and editted easily, instead or creating a new completely new commit. To correct the mistakes from the 
-//  current HEAD commit, you edit the few things that were supposed to be in that commit stage them, then use the "git commit --amend" 
+//  current HEAD commit, you edit the few things that were supposed to be in that commit stage then, and then use the "git commit --amend" 
 //  command, but since this replaces the whole last commit your terminal editor asks you to update your commit message; if you want to 
 //  keep the same commit message add the "--no-edit" flag to this, example:
 /*
 ! git commit --amend --no-edit
 */
+
+//! git branch --all
+//lists all branches
+
+//! git branch -a 
+//lists all branches from the local repository
+
+//! git branch -d <branch_name>
+//deletes a branch if merged into it's upstream branch. Used in a local repository
+
+//! git branch -D <branch_name>
+//forces the deletion of a branch even if it's not merged. Used in a local repository
+
+//! -git branch --show-current
+//tell the current working branch
 
 // * * How to Backtrack end
 
