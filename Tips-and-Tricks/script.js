@@ -1467,6 +1467,14 @@ the array literal is set to the variable myInfo:
 //this makes it possible to import only the needed methods and leave out the rest
 
 //** ES6:
+//? in order to use modules, there needs to be an "package.json" file in the same directory or in the direct ancestor directory with
+/*
+! { 
+!   "type": "module" 
+! }
+*/
+//? inside of it.
+
 //! export
 // the export statement:
 //! export { resourceToExport1, resourceToExport2 }; //ES6 export statement
