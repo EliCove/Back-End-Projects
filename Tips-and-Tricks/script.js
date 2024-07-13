@@ -1,14 +1,14 @@
 //TODO: learn how to use better comments correctly
 
-/* 
-* * key:
-* * n is used as a placeholder for a number, with numbered order if more different numbers need to be used
-* * b is used as a placeholder for a boolean value, with numbered order if different boolean equations used
-* * c is used as a placeholder to compare values
-* * r is used as a placeholder for a random value, with numbered order if different random values used
-* * i is used as a placeholder for an identifyer or name of functions and other declarations, with numbered order for more name placeholders
-* * ^ ^ are used to specify what specific section of code in a body of code is being talked about
-*/
+/*
+ * * key:
+ * * n is used as a placeholder for a number, with numbered order if more different numbers need to be used
+ * * b is used as a placeholder for a boolean value, with numbered order if different boolean equations used
+ * * c is used as a placeholder to compare values
+ * * r is used as a placeholder for a random value, with numbered order if different random values used
+ * * i is used as a placeholder for an identifyer or name of functions and other declarations, with numbered order for more name placeholders
+ * * ^ ^ are used to specify what specific section of code in a body of code is being talked about
+ */
 
 
 //use to get a random number between 0 to 50 rounded down to the nearest whole number
@@ -22,7 +22,6 @@
 
 //checks if number is an integer
 //! Number.isInteger(n)
-
 
 //to keep track of the data type of at least a variable use to operator:
 //! typeof
@@ -101,14 +100,14 @@ will be check and if not true, the second or next one that is truthy will be set
 
 // * * conditional statements end.
 
-// * * operators: 
+// * * operators:
 
 //to compare two elements for equal value use:
-//! === 
+//! ===
 //indentity operator
 
-// to compare to values for unequal values use: 
-//! !== 
+// to compare to values for unequal values use:
+//! !==
 //identity operator
 
 //called the modulo operator:
@@ -117,7 +116,7 @@ will be check and if not true, the second or next one that is truthy will be set
 //the "and" operator is:
 //! &&
 
-//the "or" operator is: 
+//the "or" operator is:
 //! ||
 
 //the "not" operator known as the bang operator:
@@ -127,9 +126,9 @@ will be check and if not true, the second or next one that is truthy will be set
 
 // * * these values (truthy and falsey values) can be used in place of truth or false values:
 // truthy values are:
-// any element that has a value that: 
+// any element that has a value that:
 // isn't falsey which is:
-// 0, "", '', null, undefined, or NaN 
+// 0, "", '', null, undefined, or NaN
 // ? " " and ' ' are truthy since they are not empty, they have a space
 
 // * * functions:
@@ -142,12 +141,12 @@ will be check and if not true, the second or next one that is truthy will be set
 !   "code to run"
 ! };
 */
-// ? This is not good practice: but there is a hoisting feature in JavaScript that allows you to call 
+// ? This is not good practice: but there is a hoisting feature in JavaScript that allows you to call
 // ? or use functions before they are defined
 //TODO: look into what hoisting is supposed to be used for, and in which cases it would be useful.
 
-//function expression, where you declare a function inside an expression, by setting the function to 
-//a variable with an identifier (it is common practice to create using const), 
+//function expression, where you declare a function inside an expression, by setting the function to
+//a variable with an identifier (it is common practice to create using const),
 //the function name is usually omitted (making the function an anonymous function), example:
 /*
 function expression:
@@ -181,7 +180,7 @@ multi-line block:
 ! }
 */
 
-//function parameters are placeholders for information that will be passed through a function when it is called, 
+//function parameters are placeholders for information that will be passed through a function when it is called,
 //(they are treated like variables within the function), example;
 /*
 function declaration:
@@ -193,7 +192,7 @@ called function with n, n1, and n3 as arguments:
 ! i(n, n1, n2); //set the arguments to match the order the function parameters are declared
 */
 
-//default parameters allow parameters to have a default value in case there is no argument passed into the function 
+//default parameters allow parameters to have a default value in case there is no argument passed into the function
 //or if the agrument is "undefined" when called, example:
 /* 
 function declaration:
@@ -206,7 +205,7 @@ called function with an optional n argument:
 ! ^i();^ //default function output
 */
 
-//functions by default evaluate to value "undefined", to fix this and capture the resulting value of a function use 
+//functions by default evaluate to value "undefined", to fix this and capture the resulting value of a function use
 //the "return" keyword in front of the value you are evaluating, example:
 /*
 function declaration":
@@ -221,8 +220,8 @@ called function:
 */
 //when using return in a function it stops all following code from being executed, like in a switch statement
 
-//helper functions are functions that complete a specific task and then return that value inside another function. 
-//Each function carrys out a specific task for easier readability and debugging. 
+//helper functions are functions that complete a specific task and then return that value inside another function.
+//Each function carrys out a specific task for easier readability and debugging.
 //Helper functions are functions declared inside of other functions. Example:
 /*
 function one:
@@ -246,24 +245,24 @@ function declaration:
 
 // * * defining scope:
 
-//a block: the code found inside curly braces {}. They help group one or more statements together, and serve as an 
+//a block: the code found inside curly braces {}. They help group one or more statements together, and serve as an
 //  important structural marker for code.
 
-//scope: the context in which variables are declared. Scope is related to blocks because varibles can exist either 
+//scope: the context in which variables are declared. Scope is related to blocks because varibles can exist either
 //  inside or outside of blocks.\
 
-//global scope: variables declared outside of blocks. Global variables can be accessed by any code in the program, including blocks, 
+//global scope: variables declared outside of blocks. Global variables can be accessed by any code in the program, including blocks,
 //  because they are not bound inside a block.
 
-//block scope: variables declared inside a block including function parameter variables, they are only accessable to lines of code 
-//  inside the block. Variables declared with block scope are called local variables, because they are only availabe to that section 
+//block scope: variables declared inside a block including function parameter variables, they are only accessable to lines of code
+//  inside the block. Variables declared with block scope are called local variables, because they are only availabe to that section
 //  of the program.
 
-//global namespace: allows variable to be accessible from anywhere in the program. Always calling global variables can cause problems 
-//  because the variables remain until the program finishes which means it fills the global namespace up quickly, taking up memory that 
+//global namespace: allows variable to be accessible from anywhere in the program. Always calling global variables can cause problems
+//  because the variables remain until the program finishes which means it fills the global namespace up quickly, taking up memory that
 //  could be used elsewhere.
 
-//scope pollution: when there are too many global variables in the global namespace, or reused variables across different scopes. 
+//scope pollution: when there are too many global variables in the global namespace, or reused variables across different scopes.
 //  It makes if different to keep track of different variables, which sets up potential accidents. Example:
 /* example from Codecademy:
 ! let num = 50;
@@ -276,7 +275,7 @@ function declaration:
 ! logNum(); // Prints 100
 ! console.log(num); // Prints 100; num was updated in the logNum() function, and since it was global it updated everywhere else as well
 */
-// ? better practice not to define variables inside of global scope, because it's not easy to read the reassignment of the global 
+// ? better practice not to define variables inside of global scope, because it's not easy to read the reassignment of the global
 // ?    variables inside and outside of blocks and could cause the program to do something unexpected.
 
 //Good scoping practice: scoping variables as tightly as possible using block scope. Tightly scoping variables will:
@@ -284,22 +283,22 @@ function declaration:
 // - make the code more understandible because it clarifies which variables are associated with different parts of the program.
 // - makes it easier to maintain code, code will be modular: separating a program into different parts.
 // - save memory in code because it cease to exist after block finishes running
-// ? if a variable does not need to exist outside a block, it shouldn't! 
+// ? if a variable does not need to exist outside a block, it shouldn't!
 // ?    -this applies when using variables inside of blocks with other blocks in them as well!
 // ? rename variables that could pollute the scope, global or block scopes!!!
 
-//Scoping too tightly is also not good, duplicate code can indicate that a variable is scoped too tightly, 
-//  when repetitve names inside multiple functions loosen the scope by using parameters and a global variable 
+//Scoping too tightly is also not good, duplicate code can indicate that a variable is scoped too tightly,
+//  when repetitve names inside multiple functions loosen the scope by using parameters and a global variable
 // instead of declaring the same variable multiple times.
 
 // * * scope end
 
 // * * JS console:
 
-//I noticed that in order to create conditional statements like if statements in the console, they need to be done inside a function block, 
+//I noticed that in order to create conditional statements like if statements in the console, they need to be done inside a function block,
 //  so that multiple lines can be used.
 
-//set HTML code inside quotes equal to document.body.innerHTML to create HTML elements from inside the JavaScript console. 
+//set HTML code inside quotes equal to document.body.innerHTML to create HTML elements from inside the JavaScript console.
 
 //$() is recogized as an alias for the document.querySelector() to select an element; this shorthand resembles jQuery syntax
 //$("body').style.color = 'blue; is an example of how to set CSS styles for HTML elements inside JavaScript console.
@@ -316,23 +315,23 @@ function declaration:
 //!<script> window.alert('Hello World'); </script> //will create a pop-up box with the text "Hello World" in the browser:
 //  inside Test-Code/Browser-Runtime.
 
-//the "window" object provides access a huge amount of data and functionality relating to the open browser window beyond .alert(), 
+//the "window" object provides access a huge amount of data and functionality relating to the open browser window beyond .alert(),
 //  other examples:
 //  window.prompt() and window.confirm(): inside Test-Code/Browser-Runtime
 
-//applications created for and executed in the browser are known as front-end applications, in order to create back-end applications that 
+//applications created for and executed in the browser are known as front-end applications, in order to create back-end applications that
 //  could run on a computer without a browser, other programming languages like Java or PHP are needed.
 
 // * * Browser runtime environment end
 
 // * * Node runtime environment:
 
-//Node needs to be installed before used on your computer only use LTS versions to avoid errors from newer unstable updates, you need to 
-//  check terminal command line for it using "node -v" to check current version and existence of node and "npm -v" to check current version 
+//Node needs to be installed before used on your computer only use LTS versions to avoid errors from newer unstable updates, you need to
+//  check terminal command line for it using "node -v" to check current version and existence of node and "npm -v" to check current version
 //  and existence of the node package manager.
 
 //Node created in 2009 allows programmers to create fulll-stack (front-end and back-end) applications using only the JavaScript language.
-//Node is a completely different runtime environment, so browser-runtime environment data values and functions, like window.alert(), can't 
+//Node is a completely different runtime environment, so browser-runtime environment data values and functions, like window.alert(), can't
 //  be used.
 //Node gives back-end applications access to a variety of features unavailable in a browser, features availble:
 //  server's file system, database, and network. Examples:
@@ -399,7 +398,7 @@ the array literal is set to the variable myInfo:
 
 //differences between arrays declared with let and const:
 //elements in an array declared with const are mutable, meaning you CAN change the contents of a const array, but you can NOT reassign a
-//  new array or a different value (new total value, like array or other data type, like function or string), example (using my first 
+//  new array or a different value (new total value, like array or other data type, like function or string), example (using my first
 //  array above):
 /*
 ! myInfo[2] = false;
@@ -407,8 +406,8 @@ the array literal is set to the variable myInfo:
 */
 //elements in an array declared with let CAN change it's contents and CAN reassign a new array or a different value
 
-//array's have the built in property "length" that you can use with dot notation to return the number of items inside an array, 
-//  just like you can use it to figure out how many characters are in a string. 
+//array's have the built in property "length" that you can use with dot notation to return the number of items inside an array,
+//  just like you can use it to figure out how many characters are in a string.
 
 //.push() method allows you to add items to the end of an array and returns the new array length, it is called like a function,
 //  with items added as arguments ( arrayName.push(r) ), examples (using my first array above):
@@ -416,11 +415,11 @@ the array literal is set to the variable myInfo:
 ! myInfo.push('loves learning', 'knows C#');
 ! console.log(myInfo); //prints [ 'my name is Marion', 21, true, 'loves learning', 'knows C#' ]
 */
-//.push() changes or mutates the myInfo array. 
+//.push() changes or mutates the myInfo array.
 //  .push() is referred to as a destructive array method since it mutates the origional array
 
 //.pop() method allows you to remove last item of an array, it doesn't take any arguments, and it returns the value of the last item.
-//  The item returned can be set to a variable and used later. 
+//  The item returned can be set to a variable and used later.
 //  .pop() mutates the origin array, example (using my first array above):
 /*
 ! const lastItem = myInfo.pop();
@@ -430,12 +429,12 @@ the array literal is set to the variable myInfo:
 
 //there are non-mutating array methods for when you don't want to mutate the origional array
 
-//.join() : combines array items and converts into a string, can take one argument of a string to separate items, can be used without 
+//.join() : combines array items and converts into a string, can take one argument of a string to separate items, can be used without
 //  an argument but won't have any seperator between combined array items in the string. Non-mutating!
 
 //.slice() : return a partial copy of an array and can take two arguments, first argument the beginning index value and second argument
-//  the index value following the the last wanted index value item; if one argument is used, if positive it selects the beginning index 
-//  value and returns the following array items, if negative it selects starting from -1 index for the last list item index; if no 
+//  the index value following the the last wanted index value item; if one argument is used, if positive it selects the beginning index
+//  value and returns the following array items, if negative it selects starting from -1 index for the last list item index; if no
 //  arguments it makes a copy of the whole array. Non-mutating!
 
 //.splice() : modifies an array by inserting, removing, and/ or replacing array elements, then returning an array of removed elements.
@@ -448,7 +447,7 @@ the array literal is set to the variable myInfo:
 //.unshift() : adds one or more elements to the begining of an array, returns the new array length, add elements as arguments. Mutating!
 //  array
 
-//.concat() : merges or concatenates two or more array and it doesn't change the existing array, but returns a new array. You put the 
+//.concat() : merges or concatenates two or more array and it doesn't change the existing array, but returns a new array. You put the
 //  first array name before .concat and then pass the second or more arrays as arguments. Non-mutating.
 
 //.indexOf() : returns the first index value at which an element passed as an argument can be found, returns -1 if the value can't be found.
@@ -457,17 +456,17 @@ the array literal is set to the variable myInfo:
 //there are many more array methods in JavaSript arrays documentation
 
 //if you try to change an array in function, and the array is mutated in the function, when the function is called with the array
-//  the array will be changed outside the function as well. This concept is called pass-by-reference, since what we are actually passing 
+//  the array will be changed outside the function as well. This concept is called pass-by-reference, since what we are actually passing
 //  to the function is a reference to where the variable memory is stored and changing the memory.
 
-//Nested array: when an array contains another array. To access nested array you can use bracket notation with the index value and to 
+//Nested array: when an array contains another array. To access nested array you can use bracket notation with the index value and to
 //  access elements within the nested array chaining or adding on more bracket notation with index values can be done, example:
 /*
     const arrayNested = [[12, 4, 17], [13, 77]];
     console.log(arrayNested[0]); prints [ 12, 4, 17 ]
     console.log(arrayNested[1][0]); prints "13" //used a chain to add [0] to arrayNested[1]
 */
-// ? to select a random element from an array use the Math.floor(Math.random() * array.length) inside bracket notation, 
+// ? to select a random element from an array use the Math.floor(Math.random() * array.length) inside bracket notation,
 // ?    example from Codecademy:
 /*
 ? const cards = ['diamond', 'spade', 'heart', 'club'];
@@ -479,7 +478,7 @@ the array literal is set to the variable myInfo:
 // * * Loops:
 
 //for loop:
-//the typical "for" loop includes an iterator (repeater) variable that appears in all three expressions of the for loop. The iterator 
+//the typical "for" loop includes an iterator (repeater) variable that appears in all three expressions of the for loop. The iterator
 //  variable is initialized, checked against the stopping condition, and assigned an new value on each loop iteration.
 //  It is best practice to use a descriptive iterator variable name.
 //The "for" loop contains three expressions separated by ";" inside parenthesis:
@@ -505,7 +504,7 @@ the array literal is set to the variable myInfo:
 //looping through arrays:
 //To loop through each element in an array a for loop should use the array's ".length" property in it's condition (second expression), and
 //  the iterator variable set into the bracket notation of the array "array[i]". For arrays you can use "i" for the iterator variable name,
-//  because i is though of as the short-hand for the word "index". 
+//  because i is though of as the short-hand for the word "index".
 //Remember that array's are zero index, so the index of the last element in an array is equivalent to array.length - 1.
 //Example:
 /*
@@ -519,7 +518,7 @@ the array literal is set to the variable myInfo:
 
 //while loop:
 //continues looping until a the condition is false, it is used when the number of times the loop needs to iterate is unknown.
-//to turn a while loop into a for loop use create the iteration variable outside of the while loop, the stopping condition is in 
+//to turn a while loop into a for loop use create the iteration variable outside of the while loop, the stopping condition is in
 //  parenthesis after the "while" keyword, the incrementation will happen inside the while loop ususally at the end of loop block.
 //  Example:
 /*
@@ -539,7 +538,7 @@ the array literal is set to the variable myInfo:
 ! }
 */
 
-//do...while loop: 
+//do...while loop:
 // works the same as while, except it will always run at least once and will run again if the condition is true, and if it equivalates
 //   to false the loop will stop. The condition is at the end of loop instead of beginning. Example:
 /*
@@ -580,13 +579,13 @@ the array literal is set to the variable myInfo:
 */
 // ? you can NOT use a "for...of" loop to iterated backwards through an array, so use a regular for loop for that
 
-// ? there are other "for..." type loops in JavaScript that are used for different purposes, like "for...in", so use them depending on 
+// ? there are other "for..." type loops in JavaScript that are used for different purposes, like "for...in", so use them depending on
 // ?    the situation.
 
 // * * Loops end
 
 // * * Objects:
-//TODO: fill in later    
+//TODO: fill in later
 // * * Objects end
 
 // * * Higher-order functions
@@ -606,11 +605,11 @@ the array literal is set to the variable myInfo:
 //async attribute: loads the script in the background and when it will execute immediately after it has been downloaded.
 
 //DOM (Document Object Model): it is a model of objects in a document, it is a powerful tree-like structure that allows programmers to
-//  conceptualize hierarchy and access the elements on a web page. It can also be explained as a logical tree-like Moedl that that 
+//  conceptualize hierarchy and access the elements on a web page. It can also be explained as a logical tree-like Moedl that that
 //  organizes a web page's HTML Document as an Object. This meaning because in JS the document is accessed an object.
 //  It's implemented to browsers to allow JS to access, modify, and update the structure of an HTML webpage in an organized way.
 
-//node: a family member in computer science, it is defined as an interscting point in a tree that contains data. 
+//node: a family member in computer science, it is defined as an interscting point in a tree that contains data.
 //  In the DOM tree the top-most node is called the Root Node, which represents the HTML document, the decendents start eith the <html>
 //  tags followed by the <head> tage, <body> tag, etc.
 //parent node: any node that is a direct ancestor to another node
@@ -620,7 +619,7 @@ the array literal is set to the variable myInfo:
 //The DOM allows you to access a node's attributes.
 
 //! document
-//document object: ia the door the the DOM structure, it allows access to the root node of the DOM tree; it allows scripts to access 
+//document object: ia the door the the DOM structure, it allows access to the root node of the DOM tree; it allows scripts to access
 //  children of the DOM as properties. Use dot notation and element name or preperty like you would acess any other object in JS.
 
 //When accessing an HTML element using the DOM in your script, you also have access to all of that elements properties. Including:
@@ -664,7 +663,7 @@ the array literal is set to the variable myInfo:
 //uses style properties using camelCase instead of hyphens, example:
 //! backgroundColor instead of background-color
 
-//! .parentNode 
+//! .parentNode
 //the .parentNode property returns the parent of a specific element in the DOM hierarchy. The document element is the root node so it's
 //  .parentNode property will return "null"
 
@@ -674,7 +673,7 @@ the array literal is set to the variable myInfo:
 //  element.
 
 //! .createElement()
-//the .createElement() method creates a new element base of the tag name passed into it as an argument, but it doesn't append it to the 
+//the .createElement() method creates a new element base of the tag name passed into it as an argument, but it doesn't append it to the
 //  document, it creates an empty element with no inner HTML.
 //values can be assigned to properties of newly created element, examples:
 /*
@@ -757,8 +756,8 @@ the array literal is set to the variable myInfo:
 //the .addEventListener() method can add multiple function handler functions, unlike the .onevent syntax that is set to only one function
 
 //* .onevent property syntax
-//event handlers can also be set using an .onevent property on a DOM element (event target). 
-//The pattern for registering a specific event is to append an element with ".on" followed by the lowercased event type name, like 
+//event handlers can also be set using an .onevent property on a DOM element (event target).
+//The pattern for registering a specific event is to append an element with ".on" followed by the lowercased event type name, like
 //  document.getElementById('myElement').onclick = function() {/*event handler code*/}; which used the click event by using .on plus click.
 
 //! .removeEventListener()
@@ -767,7 +766,7 @@ the array literal is set to the variable myInfo:
 /*
 ! eventTarget.removeEventListener('click', eventHandlerFunction);
 */
-//the the event type name and the name of event handler to remove must both be there because there might be many event handler functions 
+//the the event type name and the name of event handler to remove must both be there because there might be many event handler functions
 //  associated with a particular event.
 //If .addEventListener() was provided an anonymous function, then the event listener can't be removed.
 //?You can set an .removeEventListener() inside of the eventHandlerFunction that is being called with the .addEventListener,
@@ -783,7 +782,7 @@ the array literal is set to the variable myInfo:
 */
 
 //event objects properties:
-//you can access object properites using the .addEventListener() method and setting an argument for the function that will take in the 
+//you can access object properites using the .addEventListener() method and setting an argument for the function that will take in the
 //  event object, which you can then use the event object properties on. Example:
 /*
 ! function eventHandlerFunction(event) {
@@ -853,14 +852,14 @@ the array literal is set to the variable myInfo:
 //! .key
 //the .key property stores the values of the key pressed by the user
 
-
 // * * DOM events with JavaScript end
+
 
 // * * Introduction to Form Validation
 
 //Regular expression are sequences of characters define patterns to look for in text, they are important tool used in validating input
 //  they are used with the "pattern" attribute:
-//! [^]* 
+//! [^]*
 // [^]* is used after a pattern to match all expressions with that pattern
 //! [^]*\d{3}[^]*\{3}-\d{4}
 // [^]*\d{3}[^]*\{3}-\d{4} is used to match all expressions that contain valid cell phone numbers, or numbers and symbols only
@@ -906,11 +905,11 @@ the array literal is set to the variable myInfo:
 //  from a JavaScript library.
 // If there are unique requirements, these *systems of validation* will have to be added myself
 
-//for mostly simple websites the form validation can be written or used from a simple vanilla library like just-validate, but most 
+//for mostly simple websites the form validation can be written or used from a simple vanilla library like just-validate, but most
 //  basic validaton libraries involve directly accessing and manipulating the DOM. This can get tricky when working with a framework that
 //  relies on virtual DOM like React or Vue.
 //  In those situations it is probably best to incorporate a library that works best well with the specific framework, like the
-//  formik library which is a lightweight library that simplifies validating forms in a React app. 
+//  formik library which is a lightweight library that simplifies validating forms in a React app.
 
 //back-end validation
 //validations must also be completed on the back-end or server-side because front-end validations easy to by-pass, like simply turning off the
@@ -927,7 +926,7 @@ the array literal is set to the variable myInfo:
 !   username is already in use
 */
 //there are two ways to validate inputs on the server-side:
-//! taking place while the user is still inputting data into the form on the front end, making asynchronous requests to the server with 
+//! taking place while the user is still inputting data into the form on the front end, making asynchronous requests to the server with
 //!   peices of their data and send feedback to the user before they've submitted
 //  this is slower than front-end validation and can be a design challenge from the user experience perspective
 /*
@@ -951,7 +950,7 @@ the array literal is set to the variable myInfo:
 ! //form elements
 ! </form>
 */
-//they can contain child elements like <h1> to label the form and <p> to give more details about what the form and form and its other 
+//they can contain child elements like <h1> to label the form and <p> to give more details about what the form and form and its other
 //  elements are used for
 
 //! action
@@ -962,7 +961,7 @@ the array literal is set to the variable myInfo:
 
 //! <input>
 //the <input> element is used to create an input field, it has a "type" attribute that determines how it renders on the webpage and what
-//  kind of data it can accept, and the "name" attribute that makes it possible for the info inside <input> to be sent when the form is 
+//  kind of data it can accept, and the "name" attribute that makes it possible for the info inside <input> to be sent when the form is
 //  submitted.
 
 //! type
@@ -974,9 +973,9 @@ the array literal is set to the variable myInfo:
 */
 
 //! name
-//the name attribute labels what the input is used for 
+//the name attribute labels what the input is used for
 //! value
-//the value attribute value is assigned anything the user types into the text field, but can have a default value in text field when set 
+//the value attribute value is assigned anything the user types into the text field, but can have a default value in text field when set
 //  to the value attribute manually. Example with all previous HTML form code:
 /*
 ! <form action="/practice.html" method="POST">
@@ -984,7 +983,7 @@ the array literal is set to the variable myInfo:
 ! </form>
 */
 
-//the "name" attibute value is paired with the "value" attribute and is sent as text when the form is submitted, 
+//the "name" attibute value is paired with the "value" attribute and is sent as text when the form is submitted,
 //  for example using code above:
 /*
 ! "practice-text-box=practice value" //if user didn't change the value in the text box, this text would be sent to /practice.html
@@ -994,7 +993,7 @@ the array literal is set to the variable myInfo:
 
 //! <label>
 //the <label> element has an opening and closing tag and displays text written between them, to associtate the <label> element and the
-//  <input> element, the <input> element needs an "id" attribute with the same name value as the <label> elements "for" attribute, 
+//  <input> element, the <input> element needs an "id" attribute with the same name value as the <label> elements "for" attribute,
 //  example:
 /*
 ! <form action="/practice.html" method="POST">
@@ -1017,7 +1016,7 @@ the array literal is set to the variable myInfo:
 */
 
 //! type="number"
-//the type="number" attribute value pair is used for <input> to take in number input values, it restricts what users type into the input field to 
+//the type="number" attribute value pair is used for <input> to take in number input values, it restricts what users type into the input field to
 //  just numbers and a few characters like "-", "+", and ".".
 //there can be a "step" attribute used with it, that create arrows inside the input field to increase and decrease the value by the value
 //  of the "step" attribute
@@ -1033,7 +1032,7 @@ the array literal is set to the variable myInfo:
 //! type="range"
 //the type="range" attribute value pair is used for <input> to create a slider, to set the minimum and maximum value for the slider, values
 //  need to be set to the "min" and "max" attributes of <input>. To control how smooth and fluid the slider works the "step" attribute can
-//  be assigned a step value. -The smaller the step value the smoother the slider moves, the larger the step value the more noticable the 
+//  be assigned a step value. -The smaller the step value the smoother the slider moves, the larger the step value the more noticable the
 //  move. Example:
 /*
 ! <form action="/practice.html" method="POST">
@@ -1044,7 +1043,7 @@ the array literal is set to the variable myInfo:
 */
 
 //! type="checkbox"
-//the type="checkbox" attribute value pair is used for <input> to an individual checkbox to select an item. Each checkbox needs to be 
+//the type="checkbox" attribute value pair is used for <input> to an individual checkbox to select an item. Each checkbox needs to be
 //  created with a new <label> and <input> element pair, example:
 /*
 ! <form action="/practice.html" method="POST">
@@ -1062,14 +1061,14 @@ the array literal is set to the variable myInfo:
 ! </form>
 */
 //there are assigned values to the "value" attribute of checkboxes, but these values are not visible, so <label>'s are required
-//each <input> has the same value for the "name" attribute, so that it groups the inputs together, however each <input> id attribute 
+//each <input> has the same value for the "name" attribute, so that it groups the inputs together, however each <input> id attribute
 //  has a unique id value to pair with each label for attribute value
 //? The order of the label and input can be switched depending on what's best, for checkboxes it's usually best to put the input before
 //?   the label.
 
 //! type="radio"
 //the type="radio" attribute value pair is used for <input> to create radio buttons which have multiple options like a checkbox, but only
-//  allows you to select one item of the <input> group, other than the fact that it only allows one selection by the user, it is set up 
+//  allows you to select one item of the <input> group, other than the fact that it only allows one selection by the user, it is set up
 //  and functions the same way as a checkbox, example:
 /*
 ! <form action="/practice.html" method="POST"
@@ -1086,17 +1085,16 @@ the array literal is set to the variable myInfo:
 ! </form>
 */
 
-
 //the dropdown list is used when there are more than a few items to choose from:
 //! <select>
-//the <select> element contains <option> elements and allows the user to select an option from a dropdown list of options, it is 
+//the <select> element contains <option> elements and allows the user to select an option from a dropdown list of options, it is
 //  connected with a <label> element by having the same id attribute value as the <label> elements for attribute value.
-//It also contains the name attribute and the value of what the input is being used for, so that it can be sent with "value" value when 
+//It also contains the name attribute and the value of what the input is being used for, so that it can be sent with "value" value when
 //  the form is submitted.
 
 //! <option>
-//the <option> element is held as a child of the <select element and is used to create each single option in the dropdown list, each 
-//  option has a value attribute with the value set so that it can be used to pair with the name attribute and sent when the form is 
+//the <option> element is held as a child of the <select element and is used to create each single option in the dropdown list, each
+//  option has a value attribute with the value set so that it can be used to pair with the name attribute and sent when the form is
 //  submitted.
 //Example:
 /*
@@ -1116,7 +1114,7 @@ the array literal is set to the variable myInfo:
 */
 
 //! <datalist>
-//the <datalist> element is used in place of the <select> element for lists that are tedious to scroll through all options, it is used 
+//the <datalist> element is used in place of the <select> element for lists that are tedious to scroll through all options, it is used
 //  with the <input type="text"> element. <input> creates a text field that users can type into and filter through options in <datalist>.
 //the <input> element is linked to the <datalist> element through the matching the <input> "list" attribute value and the <datalist> "id"
 //  attribute value.
@@ -1198,7 +1196,7 @@ the array literal is set to the variable myInfo:
 
 //! pattern
 //the "pattern" attribute is assigned a regular expression, or regex that is used for cases when the user input to meet specific guidelines
-//  Regular expressions are a sequence of characters that make up a search pattern, if the input matches the regex than the form can be 
+//  Regular expressions are a sequence of characters that make up a search pattern, if the input matches the regex than the form can be
 //  submitted.
 //If a pattern isn't matched a message will pop up on the field that says to match the provided format
 
@@ -1211,14 +1209,14 @@ the array literal is set to the variable myInfo:
 //! method="GET"
 //! method="POST"
 //both of these are used to communicate data to the server, the difference between these two is that a GET request doesn't change anything
-//  about the server (sends a page), while "POST" changes or updates something about the server that would change how the page or website 
+//  about the server (sends a page), while "POST" changes or updates something about the server that would change how the page or website
 //  works (forms: buying something, creating an account, rent a movie, etc.)
 
 // * * Form Validation end
 
 // * * Classes:
 
-//although there are similarities between class and object syntax, the constructor method sets classes apart from objects, JS calls the 
+//although there are similarities between class and object syntax, the constructor method sets classes apart from objects, JS calls the
 // constructor() method every time it creates a new instance of a class
 
 //class names are capitalized and in PascalCase
@@ -1269,10 +1267,10 @@ the array literal is set to the variable myInfo:
 */
 
 //inheritance of classes:
-//When mutiple classes share properties or methods, they can use inheritance; tool to decrease the amount of code a devoloper needs to 
+//When mutiple classes share properties or methods, they can use inheritance; tool to decrease the amount of code a devoloper needs to
 //  write.
-//A parent class (know as a superclass) can be created with properties and methods that multiple child classes (known as subclasses) 
-//  share. 
+//A parent class (know as a superclass) can be created with properties and methods that multiple child classes (known as subclasses)
+//  share.
 
 //To extend a superclass to a subclass this is the syntax used in the subclass:
 /*
@@ -1332,7 +1330,7 @@ the array literal is set to the variable myInfo:
 
 //static methods are called on a class, but not on instances of a class:
 //! static
-//the "static" keyword makes methods that are only accessible from a specific class, not to instance or instances of their children (or 
+//the "static" keyword makes methods that are only accessible from a specific class, not to instance or instances of their children (or
 //  subclasses). If you try to access it through a subclass (¿or instance?), it will result in a TypeError.
 //Example (added to Production example):
 /*
@@ -1344,7 +1342,7 @@ the array literal is set to the variable myInfo:
 */
 
 //?Classes are templates for objects, classes make it easy to create multiple objects that share property names and methods, works like
-//?  factory functions do, example: 
+//?  factory functions do, example:
 /*
 ! const objectFactory = (name, age, creator, objectUse) => {
 !   return { 
@@ -1382,7 +1380,7 @@ the array literal is set to the variable myInfo:
 //Modules are reusable peices of code in a file that can be exported and inported into another file to use.
 //A modular program is one of those components that can be separated, used individually, and recombined to create a complex system.
 //? the words "module" and "file" are often used interchangably
-//the modular strategy of having components broken up into separate modules that each handle a particular task is sometimes called 
+//the modular strategy of having components broken up into separate modules that each handle a particular task is sometimes called
 //  "separation of concerns" and is useful for many reasons. By isolating code into separate files, called modules, you can:
 //! find, fix, and debug code easier
 //! reuse and recyle defined logic in different parts of your application
@@ -1391,11 +1389,11 @@ the array literal is set to the variable myInfo:
 //!   the program
 
 //A runtime environment is where your program will be executed. It determines what global objects your program can access and it can also
-//  impact how it runs. 
+//  impact how it runs.
 
 //* Node runtime environment code:
 //process: an object containing data relating to the JavaScript file being executed.
-//process.argv: when a program is executed in the Node evironment, process.argv is an array holding the arguments provided, to input 
+//process.argv: when a program is executed in the Node evironment, process.argv is an array holding the arguments provided, to input
 //  values into your code while executing the Node environment process.argv[2] and continuing index values for the amount of input needed:
 /*
 !    const favoriteNum = process.argv[2];
@@ -1416,10 +1414,10 @@ the array literal is set to the variable myInfo:
 //! The browser's runtime environment and the "ES6" "import"/"export" syntax
 
 //** Node:
-//When there is repeated functions in multiple modules, it is better to create a new module that exports that function, so there isn't 
+//When there is repeated functions in multiple modules, it is better to create a new module that exports that function, so there isn't
 //  duplicate code and to cut down on time spent and data used on the program.
-//To create a new module simple create a new file where the functions can be declared. Then to make those functions available to other 
-//  files, add them as properties to the build in "module.exports" object: 
+//To create a new module simple create a new file where the functions can be declared. Then to make those functions available to other
+//  files, add them as properties to the build in "module.exports" object:
 //how to use the Node.js "module.exports" object to export code from a file- meaning its functions and/or data can be used in other files/
 //  modules)?:
 /*
@@ -1439,6 +1437,15 @@ the array literal is set to the variable myInfo:
 */
 //the properties are actually methods, because when used in other modules they will take in an argument
 
+//To export an object, example:
+/*
+! let Robot = {
+!   name: 'Johnny'
+! };
+
+! module.exports = Robot; //no need to append it like with functions, probably
+*/
+
 //the "require()" function accepts a string as an argument that provides the file path to the module you would like to import.
 //how to use the Node.js "require()" function to import functions and/or data from another module:?
 /*
@@ -1452,7 +1459,7 @@ the array literal is set to the variable myInfo:
 !                                                           //  object.
 ! const boilingPointF = converters.celsiusToFahrenheit(100);
 */
-//in many cases, modules will export a large number of functions, but only one or two are needed, object destructuring can be used to 
+//in many cases, modules will export a large number of functions, but only one or two are needed, object destructuring can be used to
 //  extract only the needed functions. Example:
 /*
 ! //example from Codecademy:
@@ -1506,7 +1513,6 @@ the array literal is set to the variable myInfo:
 ! export { toggleHiddenElement, changeToFunkyColor };    //this exports the two stated functions from this module to be used in other files 
 */
 
-
 //! import
 // the import statement:
 //! import { exportedResource1, exportedResorce2 } from '/path/to/module.js';
@@ -1527,16 +1533,16 @@ the array literal is set to the variable myInfo:
 });
 */
 //if you are getting using a JS  module to export part of your code and import it into the JS file that affects the HTML element, inside
-//  the <script> element the attribute "type" is needed with the value of "module", some browsers will throw an error. 
+//  the <script> element the attribute "type" is needed with the value of "module", some browsers will throw an error.
 //Example from Codecademy:
 /*
 ! <script type="module" src="./secret-messages.js></script>
 */
 
-//?to try this on my own computer I will need to spin a local server or there CORS (Cross-Orgin Resource Sharing) issues. Details about 
+//?to try this on my own computer I will need to spin a local server or there CORS (Cross-Orgin Resource Sharing) issues. Details about
 //?  how to do this is save in the Websites folder with the name: Spinning Up a Local Server.
 
-//when there are naming collisions between resources you import share a name with some other value that already exists in your program 
+//when there are naming collisions between resources you import share a name with some other value that already exists in your program
 //  (or from another imported module) the imports can be renamed:
 //Examples from Codecademy:
 //format:
@@ -1550,8 +1556,8 @@ the array literal is set to the variable myInfo:
 ! greetFrancais(); //Prints: bonjour
 */
 
-//Instead of exporting each modules resources individually by name, each module also has the option to export a single value to represent 
-//  the entire module called the "default export". The default export value is often an object containing the entire set of functions 
+//Instead of exporting each modules resources individually by name, each module also has the option to export a single value to represent
+//  the entire module called the "default export". The default export value is often an object containing the entire set of functions
 //  and/or data values of the module.
 //Syntax for exporting a default object:
 /*
@@ -1571,7 +1577,6 @@ the array literal is set to the variable myInfo:
 
 ! export default resources;  //"resources" is the default value to be exported as default
 */
-
 
 //the syntax for importing default exports:
 /*
@@ -1605,7 +1610,7 @@ the array literal is set to the variable myInfo:
 */
 
 //! Error('');
-//The Error() function takes an argument of a string that becomes the value of the error's "message" property. 
+//The Error() function takes an argument of a string that becomes the value of the error's "message" property.
 //Example:
 /*
 ! console.log(Error('This is not a plural noun.'));     // prints: Error: This is not a plural noun.
@@ -1630,7 +1635,7 @@ the array literal is set to the variable myInfo:
 */
 
 // try...catch
-//the "try...catch" statement is used to anticipate and handle errors, by having code that addresses the error and allows the program to 
+//the "try...catch" statement is used to anticipate and handle errors, by having code that addresses the error and allows the program to
 //  continue running.
 //Example from Codecademy:
 /*
@@ -1645,9 +1650,9 @@ the array literal is set to the variable myInfo:
 */
 //the try block is where the code is evaluated and if the code throws an error, the code in the catch block will handle the error for us
 
-//the try...catch statement "can be used for built-in JS errors" and is really beneficial when data needs to be used from an external 
+//the try...catch statement "can be used for built-in JS errors" and is really beneficial when data needs to be used from an external
 //  source thats not directly witten in our program. Like importing an array of data, it imports a string instead, if a function can only
-//  work with arrays this can handle the throw error, so the program keeps running, and there is a message logged to the console telling 
+//  work with arrays this can handle the throw error, so the program keeps running, and there is a message logged to the console telling
 //  whats wrong.
 //Example from Codecademy:
 /*
@@ -1679,8 +1684,8 @@ the array literal is set to the variable myInfo:
 //! git status
 //is used to check the status of changes made inside the working directory
 
-//! git add 
-//and filename(s) is used to update or add the file(s) used to the staging area, can add multiple specific files with a space between 
+//! git add
+//and filename(s) is used to update or add the file(s) used to the staging area, can add multiple specific files with a space between
 //  the different files; example:
 /*
 ! git add filename.txt anotherfile.txt myfile.js
@@ -1697,15 +1702,15 @@ the array literal is set to the variable myInfo:
 */
 
 //! git commit -m ""
-//to commit staged changes this command is needed along with a message inside the quotes detailing what was done, written in the 
+//to commit staged changes this command is needed along with a message inside the quotes detailing what was done, written in the
 //  present tense, should be 50 characters or less. example:
 /*
 ! git commit -m "Create class to encode and decode secret messages" //details in 49 characters in present tense
 */
 
 //! git log
-//is used to refer back to an earlier version of a project, commits are stored chronologically in the repository and this allows them to 
-//  be viewed. The output will be: 
+//is used to refer back to an earlier version of a project, commits are stored chronologically in the repository and this allows them to
+//  be viewed. The output will be:
 // -  40-character code, called SHA, in orange, that uniquely identifies the commit.
 // -  the commit author
 // -  the date and time of the commit
@@ -1713,7 +1718,7 @@ the array literal is set to the variable myInfo:
 
 //? if cursor is stuck in git log mode use the "q" key to escape
 
-//! git branch 
+//! git branch
 //and a name creates a new branch in the working directory
 
 //* Aliases:
@@ -1721,7 +1726,7 @@ the array literal is set to the variable myInfo:
 //  this format, example:
 //! git config --global alias.camne "commit --amend --no-edit"
 //this will allow me to type:
-//! git camne 
+//! git camne
 //to edit the last commit, instead of this longer statement every time:
 //! git commit --amend --no-edit
 
@@ -1730,7 +1735,7 @@ the array literal is set to the variable myInfo:
 // * * How to Backtrack:
 
 //! git show HEAD
-//this is used to see the HEAD commit, the commit you are currently on. The things added are in green with a plus sign (+) in front and 
+//this is used to see the HEAD commit, the commit you are currently on. The things added are in green with a plus sign (+) in front and
 //  the things deleted are in red.
 
 //! git checkout HEAD
@@ -1747,24 +1752,24 @@ the array literal is set to the variable myInfo:
 //is a shortcut that can be used to revert all files in the directory to the last HEAD commit
 
 //! git reset HEAD
-//and the filename is used to unstage a file from the staging area, this command resets the file in the staging area to be the same as 
-//  the HEAD commit. 
+//and the filename is used to unstage a file from the staging area, this command resets the file in the staging area to be the same as
+//  the HEAD commit.
 //Example:
 /*
 ! git reset HEAD arrowhead.js
 */
 //unstages file changes in the staging area
 
-//! git reset 
+//! git reset
 //and the commit_SHA's first 7 characters sets HEAD back that previous commit, example:
 /*
 ! git reset 5d6921s     //sets back to the commit that starts with this
 */
-//this resets the history of your project to previous commit in commit history you pick, and anything after that commit is not part of 
+//this resets the history of your project to previous commit in commit history you pick, and anything after that commit is not part of
 //  the project anymore.
 
 //! git stash
-//this stores work temporarily for later use in a hidden directory, this allows you to "switch branches" and fix bugs in another file 
+//this stores work temporarily for later use in a hidden directory, this allows you to "switch branches" and fix bugs in another file
 //  from a previous commit, then when the bugs are fixed you "switch branches" again and can retrieve the code you were working on using:
 //! git stash pop
 //which pops back the work stored when using git stash.
@@ -1794,9 +1799,9 @@ the array literal is set to the variable myInfo:
 //  this is used with --oneline to shorten the discription for easier readability.
 
 //! git commit --amend
-//allows commits to be corrected and editted easily, instead or creating a new completely new commit. To correct the mistakes from the 
-//  current HEAD commit, you edit the few things that were supposed to be in that commit stage then, and then use the "git commit --amend" 
-//  command, but since this replaces the whole last commit your terminal editor asks you to update your commit message; if you want to 
+//allows commits to be corrected and editted easily, instead or creating a new completely new commit. To correct the mistakes from the
+//  current HEAD commit, you edit the few things that were supposed to be in that commit stage then, and then use the "git commit --amend"
+//  command, but since this replaces the whole last commit your terminal editor asks you to update your commit message; if you want to
 //  keep the same commit message add the "--no-edit" flag to this, example:
 /*
 ! git commit --amend --no-edit
@@ -1805,7 +1810,7 @@ the array literal is set to the variable myInfo:
 //! git branch --all
 //lists all branches
 
-//! git branch -a 
+//! git branch -a
 //lists all branches from the local repository
 
 //! git branch -d <branch_name>
@@ -1819,6 +1824,453 @@ the array literal is set to the variable myInfo:
 
 // * * How to Backtrack end
 
+// * * Introduction to Node.js:
+
+//Node.js: is a JavaScript "runtime", or an environment that allows the execution of JavaScript code outside a browser
+//A "runtime" converts code written in a high-level, human readable, programming language and compiles it down to code
+//  the computer can execute.
+
+//To check current version of Node, input this into the command line:
+/*
+! node -v
+*/
+
+//To get the filepath to node, use:
+/*
+! which node
+*/
+
+//Node REPL: REPL is an abbreviation for read-eval-print loop. It's a program that loops through three different states: a 'r'ead state
+//  where the program 'r'eads input from a user, the 'e'val state where the program 'e'valuates the user's input, and the 'p'rint state
+//  where the program 'p'rints out its evaluation to the console. Then it loops through these states again.
+//When Node is installed, it comes with a built-in JavaScript REPL. The REPL is accessed by entering the command
+//! node
+//  A ">" character will show up in the terminal, indicating REPL is running and prompting input. The Node REPL will evaluate the input
+//  line by line. -By default 'enter' is hit when the input is ready for eval. If you I want to type multiple lines to be typed and
+//  evaluated at once, type ".editor" while in the REPL and while in "editor" mode, type "control + d" when ready for input to be
+//  evaluated.
+//Each session of the REPL has a single shared memory, any variables or functions defined are accessible until the the REPL is exited.
+//It is extremely useful for performing calculations, learning a language, and developing code. It's a place where language features can
+//  be explored and to try things out while receiving immediate feedback.
+
+//The Node environment 'contains a number of Node specific global elements' in addition to into the JavaScript language. Every
+//  Node-specific global property sits inside the "Node global object", this object contains a number of useful properties and methods
+//  that are avaiable anywhere in the Node environment.
+//Global object:
+/*
+! global //this will return all the keys and pairs in this object
+! Object.keys(global) //returns an easier-to-read list of properties
+*/
+//the 'global' object is just a JavaScript object at its core.
+
+//? What is the Window object? It is the JavaScript object that in the browser that holds the DOM, look up window for mor details above.
+
+//*connected to node modules (above) ^^^^^^^^^
+//Core modules: core modules are the several built-in modules through Node.js used to perform tasks efficiently. The core modules are
+//  defined in within Node.js's source code and are located in the "lib/" folder. Core modules can be 'required' by passing a string
+//  with the name of the module into the "require()" function, example:
+/*
+! require in the 'events' core module
+! const events = require('events');
+*/
+//Some core modules are used inside other core modules, for example: the 'util' module can be used in the 'console' module to format
+//  messages. Other commonly used core modules are 'process' and 'os'.
+//To list all the core modules built into Node.js, enter the Node REPL using
+//! node
+//then enter
+//! require('module').builtinModules
+//to get a complete list of core modules
+
+//One of the most commonly used Node.js core modules is the 'console' module. In Node.js the terminal is used to send and receive text
+//  feedback to and from a program for debugging purposes. This familiarity to how the console is used in the web browser is because in
+//  Node.js the built-in 'console' exports a global 'console' object that gives the terminal similar functionality.
+//The 'console' object provides many of the same familiar methods such as '.log()' to print messages to the terminal, '.assert()' to print
+//  a message to the terminal if the value is falsy, '.table()' to print out a table in the terminal from an object or array.
+//? Since 'console' is a global module, "its methods can be accessed from anywhere", and the 'require()' function isn't necessary.
+//Examples:
+/*
+! console.table(r); //prints a table, if an array: index | value, if an object: key | value(s).
+! console.assert(b); //if "false prints: 'Assertion failed' in red" to the console; if "true prints nothing" to the console.
+*/
+
+//! console.count() //the number of times console.count(r) with a specific input is inputted is counted each time
+
+//In computer science "process" is the instance of a computer program that is being executed. Like the various processes in Task Manager
+//  or Activity Manager, which information about those processes can be seen.
+
+//Node has a global 'process' object with useful methods and information about the current process.
+//  The 'process.env' property is an object that stores and controls information about the environment in which the process is currently
+//  running. For ex) the 'process.env' object contains a PWD property which holds a string with the directory in which the current
+//  process is located.
+//It can be useful to have some 'if/ else' logic in the program depending on the current environment- a web application in a
+//  development phase might perform different tasks than when it's live to users. We could store this information on the 'process.env'.
+//  One convention is to add a property to 'process.env' with the key "NODE_ENV" and a value of either "production" or "development"
+//Example:
+/*
+! if (process.env.NODE_ENV === 'development') {
+!   console.log('Test code!');
+! }
+*/
+
+//! process.memoryUsage()
+//this returns information on the CPU demands of the current process. It returns a property similar to:
+/*
+ * {
+ * rss: 26247168,
+ * heapTotal: 5767168,
+ * heapUsed: 3573032,
+ * external: 8772
+ * }
+ */
+//"Heap" can mean different things in different contexts: a heap can refer to 'a specific data structure', but it can also refer to 'a
+//  block of computer memory'. The 'process.memoryUsage().heapUsed' method will return a number representing how many bytes of memory
+//  the current process is using.
+
+//! process.argv
+//this property holds an array of command line values provided when the current process was initiated. The first element in the array is
+//  the absolute path to Node, which ran the process. The second element in the array is the path to the file that is running. The
+//  following elements will be any command line arguments provided when the process was initiated.
+//  Command line arguments are separated from one another with spaces.
+//? Since 'process' is a global module, "its methods can be accessed from anywhere", and the 'require()' function isn't necessary.
+
+//TODO: do process.emitWarning() challenge from lesson ending
+
+//Node.js is a JavaScript runtime, which means it can execute code outside of the browser, and the 'os' core module gives access to much
+//  of that information.
+//? the 'os' module is NOT global and needs to be included into the file in order to gain access to its methods
+//To include 'os' module in your file use:
+//! const os = require('os');
+
+// After 'os' module is added methods like these can be called
+//! os.type() -to return the computer's operating system
+//! os.arch() -to return the operating system CPU architecture
+//! os.networkInterfaces() -to return information about the network interfaces of the computer, such as IP and MAC address
+//! os.homdir() -to return the current user's home directory
+//! os.hostname() -to return the hostname of the operating system
+//! os.uptime() -to return the system uptime in seconds
+//Example:
+/*
+! const os = require('os');
+
+! const local = {
+!   'Home Directory': os.homedir(); //this is the 'name of the home directory'
+!   'Operating System': os.type(); //this is the 'type of operating system'
+!   'Last Reboot': os.uptime(); //this is the 'time since the computer was last rebooted'
+! }
+*/
+
+//! os.freemem() checks how much free system memory is avaiable
+
+//'utility functions' (outlier functions used to maintain code and debug certain aspects of a programs functionality) are sometimes used 
+//  by developers. They don't create new functionality in a program, but they are thought of as internal tools used to maintain and debug
+//  code.
+//The Node.js 'util' core module contains methods specifically designed to use as utility functions.
+//? the 'util' module is NOT global so it needs to be required into the file:
+//! const util = require('util');
+//'types' is one important object of the 'util' module, which provides methods for runtime type checking in Node. The 'types.isDate()'
+//  method checks for Date objects and returns a boolean value.
+//Example:
+/*
+! const util = require('util');
+
+! const today = new Date();
+! const earthDay = 'April 22, 2022';
+
+! console.log(util.types.isDate(today)); //true   //since it is a 'Date' object
+! console.log(util.types.isDate(earthDay)); //false   //since it is a string
+*/
+//'.promisify()' turns callback functions into promises
+//TODO: study promises again, I don't quite remember them, and study callback functions in the To do: bookmark, finish this part after that
+
+//TODO: do util.format() challenge from the end of lesson
+
+// * * Introduction to Node.js end
+
+// * * Node.js Essentials:
+
+//Node is often described as having an event-driven architecture because when Node was created it applied the same concept of event-driven
+//  principles, like when writing web applications, to the back-end environment instead of like traditional imperative programming where 
+//  the computer is given a series of instructions to execute in a predefined order.
+//Node provides an 'EventEmitter' class which can be accessed by requiring in the 'events' core module.
+//Examples:
+/*
+! let events = require('events');
+
+! let myEmitter = new events.EventEmitter();
+*/
+//Each event emitter instance has an '.on()' method which assigns a "listener" callback function to a named event. The '.on()' method
+//  takes the name of the event as a string as the first argument, and the listener callback function as its second argument.
+//Each event emitter instance also has an '.emit()' method which announces a named event has occurred. The '.emit()' method takes the
+//  name of the event as a string as the first argument, and the data that should be passed into the the listener callback function as
+//  its second argument.
+//Example, connected to example above:
+/*
+! let newUserListener = (data) => {
+!   console.log(`We have a new user: ${data}.`);
+! };
+
+! myEmitter.on('new user', newUserListener); //assign the newUserListener function as the listener callback for the 'new user' events
+! myEmitter.emit('new user', 'Lily Pad') //Emit a 'new user' event   //newUserListener will be envoked with 'Lily Pad'
+*/
+
+//Input/ output: In the Node environment the console is the terminal, and the 'console.log()' method is a "thin wrapper" on the 
+//  'stdout.write()' method of the 'process' object. 'stdout' stands for standard output.
+//Example:
+/*
+! process.stdout.write('Enter location:');  //prints "Enter location:" to the command line, and waits for user to input information
+*/
+//In Node the input for a user can be received through the terminal using the 'stdin.on()' method on the 'process' object, example:
+/*
+! process.stdin.on('data', (userInput) => {
+!   let input = userInput.toString();
+!   console.log(input);
+! })
+*/
+//'.on()' is able to be used on because 'process.stdin' is an instance of 'EventEmitter' under the hood. -When a user enters text into 
+//  the terminal and hits enter, a 'data' event will be fired and the anonymous listener callback will be envoked. The 'userInput' 
+//  received is an instance of the Node Buffer class, so we convert it to string before printing.
+
+//the Node environments's 'error' module has has all the standard JS errors such as 'EvalError', 'SyntaxError', 'RangeError', 
+//  'ReferenceError', 'TypeError', and 'URIError' as well as the 'Error' class or creating new error instances. Within code errors can 
+//  be generated and 'throw'n, and with synchronous code in Node, the error handling techniques such 'try...catch' statements can be used.
+//? the 'error' module is in the golbal scope, so there is no need to import the module.
+//Many Node APIs use error-first callback functions -callback functions which have an error as the first expected argument and data as the
+//  second argument. If the asynchronous task results in an error, it will be passed as the first argument to the callback function. If no
+//  error was thrown, the first argument will be 'undefined'.
+//Example:
+/*
+! const errorFirstCallback = (err, data) => {
+!   if (err) {
+!     console.log(`There WAS an error: ${err}`);
+!   } else {
+!     console.log(`There was NO error. Event data: ${data}`); //err was falsy
+!   }
+! }
+*/
+//Error-first callback functions are used because errors can't be caught ('catch') when it is thrown asynchronously.
+
+//the 'Buffer' module is used to handle "binary" data. 
+//? The 'Buffer' module is within the global scope, which means 'Buffer' objects can be accessed anywhere in the environment without using
+//?   the importing the module with 'require()'.
+//A Buffer object represents a fixed amount of memory that can't be resized. 'Buffer' objects are similar to an array of integers where 
+//  each element in the array represent a byte of data. The buffer object will a range of integers from 0 to 255 inclusive (including 255).
+//The 'Buffer' module provides a variety of of methods to handle binary data such as '.alloc()', '.toString()', '.from()', and 
+//  '.concat()'. 
+//The '.alloc()' method creates a new 'Buffer' object with the size specified as the first parameter. The '.alloc()' method accepts three
+//  arguments: 
+//  -Size: Required. //the size of the buffer
+//  -Fill: Optional. //a value to fill the buffer with. Default is 0.
+//  -Encoding: Optional. //Default is UTF-8
+//Example:
+/*
+! const buffer = Buffer.alloc(5);
+! console.log(buffer); //Output: [0, 0, 0, 0, 0]
+*/
+//The '.toString()' method translates the 'Buffer' object into a human-readable string. It accepts three optional arguments: 
+//-Encoding: Default is UTF-8.
+//-Start: The byte offset to start translating in the 'Buffer' object. Default is 0.
+//-End: The byte offset ot end translating in the 'Buffer' object. Default is the length of the buffer. The start and end of the buffer 
+//  are similar to the start and end of an array, where the first element is 0 and increments upward.
+//Example:
+/*
+! const buffer = Buffer.alloc(5, 'a');
+! console.log(buffer.toString());  //Output: aaaaa
+*/
+//The '.from()' method is provided to create a new 'Buffer' object from the specified string, array, or buffer. The method accepts two 
+//  arguments:
+//-Object: Required. The object to fill the buffer with.
+//-Encoding: Optional. Default is UTF-8
+//Example:
+/*
+! const buffer = Buffer.from('hello');
+! console.log(buffer); //Output: [104, 101, 108, 108, 111]
+*/
+//The '.concat()' method joins all buffer objects passed in an array into one 'Buffer' object. '.concat()' comes in handy because a 
+//  'Buffer' object can't be resized. This method accepts two arguments:
+//-Array: Required. An array containing 'Buffer' objects.
+//-Length: Optional. Specifies the length of the concatenated buffer.
+//Example:
+/*
+! const buffer1 = Buffer.from('hello'); //Output: [104, 101, 108, 108, 111]
+! const buffer2 = Buffer.from('world'); //Output: [119, 111, 114, 108, 100]
+! const array = [buffer1, buffer2];
+! const bufferConcat = buffer.concat(array);
+
+! console.log(bufferConcat); //printed Output: [104, 101, 108, 108, 111, 119, 111, 114, 108, 100]
+*/
+
+//When running JS code on a browser, it's important for a script to have only limited access to a user's filesystem. This technique of 
+//  isolating some application from other is know as 'sandboxing'. Sandboxing protects users from malicious programs and invasions of 
+//  privacy. 
+//However in the back-end, less restricted interaction with the filesystem is essential. The Node 'fs' core module is an 'API' for 
+//  interacting with the 'f'ile 's'ystem. --It was modeled after the the 'POSIX' standard for interacting with the filesystem.
+//Each method available through the 'fs' modules has a synchronous version and an asynchronous version.
+//The 'fs' core module's '.readFile()' method "read"s data from a provided "file", example:
+/*
+! const fs = require('fs'); //require the fs core module
+
+! let readDataCallback = (err, data) => { //define the error first callback function
+!   if (err){
+!     console.log(`Something went wrong: ${err}`);
+!   } else {
+!     console.log(`Provided file contained: ${data}`);
+!   }
+! }
+
+! fs.readFile('./file.txt', 'utf-8', readDataCallback); //invoked with: -a string that contains a path to the file 'file.txt',
+!                                                       //-a string specifying the file's character encoding (usually 'utf-8' for text files),
+!                                                       //-a callback function to be invoked when the asynronous task of reading from the 
+!                                                       //  file system is complete. Node will pass the contents of 'file.txt' into the 
+!                                                       //  provided callback function as its second argument.                                           
+*/
+
+//Readable and Writeable Streams:
+//Instead of reading entire files, it is more realistic scenerios data isn't processed all at once but sequentially, piece by piece,
+//  what is known as a 'stream'. Streaming data is preferable since there doesn't need to be enough RAM to process all the data at once,
+//  nor does all the data have to be at hand to begin processing it.
+//One of the simples uses of streams is reading and writing to files line-by-line. 
+
+//To read files line-by-line, or read data from streams, the '.createInterface()' method from the 'readline' core module is used. 
+//  '.createInterface()' returns an 'EventEmitter' to set up to emit 'line' events.
+//Example:
+/*
+! const readline = require('readline');
+! cosnt fs = require('fs');
+
+! const myInterface = readline.createInterface({ //'readline.createInterface()' is invoked with an object containing the designated input
+!   input: fs.createReadStream('text.txt') //input is set to 'fs.createReadStream('text.txt')' which will create a stream from the
+! });                                      //  'text.txt' file.
+
+! myInterface.on('line', (fileLine) => {       //a listener callback is assigned to execute when 'line' events are emitted. A 'line' event
+!   console.log(`The line read: ${fileLine}`); // will be emitted after each line from the file is read.  
+! });
+*/
+//A writeable stream to a file can be created using the 'fs.createWriteStream()' method, example:
+/*
+! const fs = require('fs');
+
+! const fileStream = fs.createWriteStream('output.txt'); //the output file is set to 'output.txt'
+
+! fileStream.write('This is the first line!); //this writes a line to the file
+! fileStream.write('This is the second line!);
+! fileStream.end(); //this is used to indicate the end of a writeable stream, so the writeable stream does not remain open indefinitely,
+!                   //  unlike readable streams that end when they have no more data to read.
+*/
+
+//The timers module:
+//The 'timer' module is used for when code needs to be executed at a specified point in time. 
+//? Like the 'Buffer' module, the methods of the 'timer' module are global, so the 'require()' import statement is not necessary.
+//Timer functions in Node.js behave similary to how they work in front-end JS programs, like the familiar 'setTimeout()' and 
+//  'setInterval()' functions, but the "difference" is that "they are added to the Node.js event loop". This means that the timer 
+//  functions are scheduled and put into a queue. This queue is processed at every iteration of the event loop. 
+//?If a timer function is executed outside of a module, the behavior will be random (non-deterministic).
+//The 'setImmediate()' function is often compared to the 'setTimeout()' function. When 'setImmediate()' is called, it executes the 
+//  specified callback function after the current (poll phase) is complete. The method accepts two parameters:
+// -The callback function: Required.
+// -Arguments for the callback function: Optional.
+//If multiple 'setImmediate()' functions are instantiated, they will be queued for execution in the order they were created.
+//Example:
+/*
+! setImmediate(() => {
+!   console.log('Hello. My name is not Codey.');
+! })
+*/
+
+//? What is a poll phase?
+
+// * * Node.js Essentials end
+
+
+// * * Node package manager:
+
+//developers can take advantage of modules created by other developers, many of which are shared freely. These third-party modules often
+//  solve common problems and simplify the development process. When these modules are used in code, they are refereed to as 
+//  'dependencies'.
+//Using dependencies is an essential aspect of efficiently creating web applications. The wheel doesn't need to be reinvented each time
+//  there needs to be new functionality. Furthermore, well-maintained modules usually solve many 'edge cases' that otherwise would have
+//  to be implemented personaly.
+//Where to find these dependencies: most of the time, these dependencies are installed in 'packages' handled by a 'package manager'. A
+//  package is simply a third-party module wrapped up with the list of that modules own dependencies. 
+//Modules can be dependent on other modules! This is both a blessing and a curse. This ever-growing chain of modules means that modules 
+//  can solve more and more complex problems over time while making development lightning-quick. However, managing modules that are 
+//  dependent on other modules that are dependent on even further modules can be quite cumbersome to handle alone. These troubles are 
+//  avoided by using a package manager, an indespensible tool that:
+//  -   downloads and installs the 'packages' to be used as dependencies on a project.
+//  -   checks the packages to make sure they don't have any know vulnerabilities.
+//  -   checks if packages can be updated to a newer version.
+//  -   handles all of the packages' sub-dependencies.
+//  -   cleanly removes all the files of a package when it's no longer needed.
+//  -   provides a repeatable and consistent process of installing dependencies for developers and their teammates.
+//the most popular package manager is the 'N'ode 'P'ackage 'M'anager, or 'NPM', which is the default package manager for Node.js. Its
+//  command-line tool 'npm' is even included in the Node.js installation process. This tool enables developers to download and manage 
+//  packages via the terminal.
+//To check that the 'npm' command-line tool is installed on your computer use the command:
+//! npm -v 
+//  in the terminal to look up the 'npm' version. If the command returns "command not found", double-check the local Node configuration.
+
+//Initialization:
+//Initializing a Node.js app that utilizes the 'npm', open the terminal and enter the command:
+//! npm init
+//  this will result in a series of prompts asking for information about the project, including: the projects name, version number, 
+//  description, and much more. Once hte prompts have been completed, a 'package.json' will be generated with the information listed in 
+//  JSON format.
+//If looking to get intialized quickly use the command: 'npm init -y' to skip the prompts.
+//The 'package.json' file will like something like this:
+/*
+! {
+!   "name": "my-project",
+!   "version": "1.0.0",
+!   "description": "a basic project",
+!   "main": "index.js",
+!   "scripts": {
+!     "test": "echo \"Error: no test specified\" && exit 1"
+!   },
+!   "author": "Super Coder",
+!   "license": "ISC",
+!   "dependencies": {
+!     "express": "^4.17.1"
+!   },
+! }
+*/
+//The "dependencies" dictionary, like the example above, lists all the projects dependencies alongside their version numbers.
+//? if new dependencies are installed using the 'npm', the 'packages.json' file will automatically be updated so as to maintain the most
+//?   up-to-date picture of the packages used in the application. 
+//The example file above already has the popular routing package 'express' listed as a dependency.
+
+//Installation:
+//There are over 1 million packages in the 'npm' registry created by developers and they can be explored on the officical npm website.
+//Another popular Node.js package is 'nodemon', a tool to automatically restart a program when a file changes, alleviating the need to do
+//  manually each time a file is saved.
+//Each packages 'npm' page includes information on using the package, stats about the package, and a link to the github repository.
+//? 'i' is actually an alias for 'install', so either npm i "node-name" or npm install "node-name" can be used when installing a package
+//The 'node i <package name>' command installs a package 'locally' in a folder called 'node_modules/' which is created in the project 
+//  directory that the command was ran from. In addition, the newly installed package will be added to the 'package.json' file
+
+//Package Scopes:
+//Generally, most npm packages should be installed locally -this way among other reasons, each project can control which specific versions
+//  of its dependencies it uses. But there are also other ways to install packages:
+//  -   devDependencies:
+//  While most dependencies play a direct role in the functionality of an application, 'development dependencies' are used for the purpose
+//    of making development easier or more efficient.
+//    In fact the 'nodemon' package is actually better suited as a development dependency since it makes developers lives easier but makes
+//    no changes to the app itself. To install 'nodemon' as a developer dependency, the flag --save-dev or -D alias can be added:
+//! npm install nodemon --save-dev
+//  Developer dependencies are listed in the "devDependencies" field in to 'package.json' file. This indicates that the package will be 
+//    used specifically for development and "will not be" included in a production release of the project. Example:
+/*
+! {
+!   "devDependencies": {
+!     "nodemon": "^2.0.13"
+!   }
+! }
+*/
+//  like local package, development dependencies are also stored in the 'node_modules/' folder
+//  -   Global packages:
+//  
+//  -   npm install:
+//
+
+// * * Node package manager end
 //use shift + tab to shift code to the left
 
-//use command ^>format document^ to use prettier on code to format code correctly
+//use command '>format document' to use prettier on code to format code correctly
