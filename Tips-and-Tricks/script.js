@@ -1521,7 +1521,7 @@ the array literal is set to the variable myInfo:
 ! //From Codecademy:
 
 ! //secret-messages.js
-! import { toggleHiddenElement, changeToFunkyColor } from '..modules/dom-functions.js'; //this imports the two stated classes to this file
+! import { toggleHiddenElement, changeToFunkyColor } from '.modules/dom-functions.js'; //this imports the two stated classes to this file
 
 ! const buttonElement = document.getElementById('secret-button'); //saves element with the ID of secret-button to buttonElement variable
 ! const pElement = document.getElementById('secret-p'); //saves element with the ID of secret-p to pElement variable
@@ -1819,7 +1819,7 @@ the array literal is set to the variable myInfo:
 //! git branch -D <branch_name>
 //forces the deletion of a branch even if it's not merged. Used in a local repository
 
-//! -git branch --show-current
+//! git branch --show-current
 //tell the current working branch
 
 // * * How to Backtrack end
@@ -2264,13 +2264,100 @@ the array literal is set to the variable myInfo:
 !   }
 ! }
 */
-//  like local package, development dependencies are also stored in the 'node_modules/' folder
+//  like local packages, development dependencies are also stored in the 'node_modules/' folder
 //  -   Global packages:
-//  
+//  Some packages can be installed 'globally' meaning theyn are availble system-wide, without the need to intall it each time a new 
+//    application is created. Packages installed this way will typically be used in the command-line rather than imported into a project's
+//    code. One example of this is the 'http-server package' which allows a zero-configuration server to be spun from anywhere in the 
+//    command-line. 
+//  To install a package globally, use the '-g' flag with the installation command, example:
+/*
+! npm install http-server -g 
+*/
+//  'http-server' is good package to install globally since it is a general command-line utility and its purpose is not linked into any
+//    specific functionality within an app.
+//  Unlike local package dependencies and development dependencies, packages installed globally will not be listed in a projects 
+//    'packages.json' file and they will be stored in "a separate global 'node_modules/' folder"
 //  -   npm install:
-//
+//  As third-party packages are installed from npm, the package.json file is created for a project. This turns the project into a package
+//    that isn't published in the npm registry (yet).
+//  While a project may never be published as a public package, having a package.json file easier collaboration with other developers.
+//    Anyone who wants to work with the origional developer can simply download their 'package.json' and run the command:
+//! npm i
+//    Running this command will automatically install all packages listed as dependencies and development dependencies. If the developer
+//    downloading wishes to leave out the development dependencies, they can run the command with the '--production' flag:
+//! npm i --production
+//    Because of this convenient command ('npm i'), it is recommended that the developer does not include their local 'node_modules/' 
+//    folder in any repository that they use to store and share their code to avoid taking up precious storage resources. 
 
 // * * Node package manager end
+
+// * * Getting user input in Node.js
+
+//Node.js allows you to run JavaScript code outside of a browser window, offering powerful tools to interact with a computer filesystem,
+//  run web servers, and create terminal applications. Node handles these tasks by running 'asynchronously', which means that reading 
+//  user input from the terminal isn't as simple as calling the 'getInput()' function.
+
+//*Working with Input:
+//Node.js provides a few ways to handle interactions, including the built-in 'process' object and 'readline' modules. While these are
+//  powerful tools, they rely on 'callback functions' and can be confusing to work with at first (true, I am confused).
+//Example:
+/*
+! const readline = require('readline').createInterface({
+!   input: process.stdin,
+!   output: process.stdout
+! });
+
+! readline.question('Who are you?', name => {
+!   console.log(`Hey there ${name}!`);
+!   readline.close();
+! })
+*/
+//An example of what you would see when the above is ran in Node:
+/*
+! $ node read.js
+! Who are you?
+! > Marion //this is input
+! Hey there Marion!
+! $
+*/
+//  This works as intended, but it's a lot of ?boilerplate¿, and you need to call 'readline.question()' and create a callback function
+//  every time you want to use it for input. There is a simpler way, whether you're just getting started out with JavaScript development
+//  or just want to get an interactive script running as quickly as possible.
+
+//*Using prompt-sync:
+//The 'prompt-sync' Node module provides an easy-to-use alternative to this callback-based syntax.
+//  1. Make sure Node and NPM are installed
+//  2. Run 'npm install prompt-sync' in the terminal 
+//  3. Require prompt-sync usng this syntax:
+//! const prompt = require('prompt-sync')();
+//  There is '()' after 'require()' because the prompt-sync module is a function, it creates prompting functions, so 'prompt-sync' needs
+//  to be called in order to get the actual prompting function.
+//Once the 'prompt-sync' module is loaded and called, using it to retrieve user input is relatively straightforward. Example:
+/*
+! const prompt = require('prompt-sync')();
+
+! const name = prompt('What is your name?');
+! console.log(`Hey there ${name}!`);
+*/
+//  The 'prompt()' function returns the user feedback, so simply store the value to a variable to use later. The 'name' variable above
+//  stores the value and then it's repeated to the user on the next line.
+
+//Letting users exit:
+//By default, most terminal programs will exit with 'CTRL' + 'C' (This sends a 'SIGINT', or a "signal interrupt" message indicating that
+//  a user wants to exit a program). With 'prompt-sync', in order to make sure that your users can exit at will, add a configuration 
+//  object with 'sigint: true' when invoking the 'prompt-sync' function:
+//! const prompt = require('prompt-sync')({sigint: true});
+
+//Working with numbers:
+//All user input will be read as a string, so in order to treat user input as numbers, you'll need to convert the input:
+/*
+! const num = prompt('Enter a number: ');
+! console.log('Your number + 4 =');
+! console.log(Number(num) + 4);
+*/
+
+// * * Getting user input in Node.js end
 //use shift + tab to shift code to the left
 
 //use command '>format document' to use prettier on code to format code correctly
